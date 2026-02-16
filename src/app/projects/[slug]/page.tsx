@@ -89,14 +89,21 @@ export default async function ProjectPage({
         </p>
       </div>
       {/* Features */}
-      <div className="mt-10">
-        <h2 className="text-lg font-semibold text-foreground">Features</h2>
-        {project.features!.map((feature) => (
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            {feature}
-          </p>
-        ))}
-      </div>
+      {project.features && project.features?.length > 1 && (
+        <div className="mt-10">
+          <h2 className="text-lg font-semibold text-foreground">
+            Features I worked on
+          </h2>
+          {project.features.map((feature, index) => (
+            <p
+              key={index}
+              className="mt-4 leading-relaxed text-muted-foreground"
+            >
+              {feature}
+            </p>
+          ))}
+        </div>
+      )}
 
       {/* Description */}
       <div className="mt-10">
@@ -107,8 +114,8 @@ export default async function ProjectPage({
 
       {/* CTA */}
       {project.links &&
-        project.links.map((link) => (
-          <div className="mt-8">
+        project.links.map((link, index) => (
+          <div key={index} className="mt-8">
             <Button
               asChild
               className="bg-accent text-accent-foreground hover:bg-accent/90"
