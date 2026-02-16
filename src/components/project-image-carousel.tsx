@@ -41,7 +41,7 @@ export function ProjectImageCarousel({
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border/60">
+              <div className="relative aspect-16/10 overflow-hidden rounded-xl border border-border/60">
                 <Image
                   src={image}
                   alt={`${title} screenshot ${index + 1}`}

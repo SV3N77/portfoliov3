@@ -1,4 +1,4 @@
-import { Code2, Palette, Globe, Terminal, Layers, Cpu } from "lucide-react";
+import { Code2, Palette, Gamepad, Cpu } from "lucide-react";
 
 const interests = [
   {
@@ -14,19 +14,10 @@ const interests = [
       "Crafting intuitive interfaces that prioritize user experience."
   },
   {
-    icon: Globe,
-    title: "Open Source",
-    description: "Contributing to and maintaining open source projects."
-  },
-  {
-    icon: Terminal,
-    title: "DevOps",
-    description: "Streamlining deployment pipelines and infrastructure."
-  },
-  {
-    icon: Layers,
-    title: "System Design",
-    description: "Architecting scalable and maintainable software systems."
+    icon: Gamepad,
+    title: "Gaming",
+    description:
+      "I love playing and am invested in the creative processes of games."
   },
   {
     icon: Cpu,

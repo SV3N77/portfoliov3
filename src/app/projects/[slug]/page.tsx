@@ -85,24 +85,41 @@ export default async function ProjectPage({
           About this project
         </h2>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          {project.description}
+          {project.description1}
+        </p>
+      </div>
+      {/* Features */}
+      <div className="mt-10">
+        <h2 className="text-lg font-semibold text-foreground">Features</h2>
+        {project.features!.map((feature) => (
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            {feature}
+          </p>
+        ))}
+      </div>
+
+      {/* Description */}
+      <div className="mt-10">
+        <p className="mt-4 leading-relaxed text-muted-foreground">
+          {project.description2}
         </p>
       </div>
 
       {/* CTA */}
-      {project.link && (
-        <div className="mt-8">
-          <Button
-            asChild
-            className="bg-accent text-accent-foreground hover:bg-accent/90"
-          >
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              View Project
-            </a>
-          </Button>
-        </div>
-      )}
+      {project.links &&
+        project.links.map((link) => (
+          <div className="mt-8">
+            <Button
+              asChild
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View Project
+              </a>
+            </Button>
+          </div>
+        ))}
 
       {/* Navigation */}
       <div className="mt-16 flex items-center justify-between border-t border-border/60 pt-8">

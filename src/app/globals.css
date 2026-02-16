@@ -1,11 +1,6 @@
 @import "tailwindcss";
 @import "tailwind-animate";
 
-/* Custom Utilities */
-@utility text-balance {
-  text-wrap: balance;
-}
-
 /* Design Tokens */
 :root {
   --background: 210 20% 98%;
