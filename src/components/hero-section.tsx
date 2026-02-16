@@ -13,10 +13,11 @@ export function HeroSection() {
             Danny Jiang
           </h1>
           <p className="mt-2 text-lg text-muted-foreground md:text-xl">
-            Web Developer
+            Software Engineer
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
-            I build accessible, pixel-perfect digital experiences for the web.
+            I am an aspiring web developer with a passion for creating
+            innovative and user-friendly web applications.
           </p>
         </div>
 
