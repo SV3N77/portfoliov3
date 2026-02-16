@@ -22,29 +22,29 @@ export function ContactSection() {
 
             <div className="mt-8 flex flex-col gap-4">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:Danny.jiang177@gmail.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Mail className="h-4 w-4 text-accent" />
-                hello@example.com
+                Danny.jiang177@gmail.com
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/SV3N77"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Github className="h-4 w-4 text-accent" />
-                github.com/janedoe
+                github.com/SV3N77
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/danny-jiang2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Linkedin className="h-4 w-4 text-accent" />
-                linkedin.com/in/janedoe
+                linkedin.com/in/danny-jiang2
               </a>
             </div>
           </div>
