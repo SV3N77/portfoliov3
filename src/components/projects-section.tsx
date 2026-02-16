@@ -22,7 +22,7 @@ export function ProjectsSection() {
               href={`/projects/${project.slug}`}
               className="group overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:border-accent/40 hover:shadow-md"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <Image
                   src={project.images[0]}
                   alt={project.title}

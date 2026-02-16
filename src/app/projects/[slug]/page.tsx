@@ -116,10 +116,7 @@ export default async function ProjectPage({
       {project.links &&
         project.links.map((link, index) => (
           <div key={index} className="mt-8">
-            <Button
-              asChild
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
-            >
+            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 View Project
