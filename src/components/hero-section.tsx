@@ -27,10 +27,9 @@ export function HeroSection() {
             I'm a graduate at the Unversity of Technology Sydney studied a
             Bachelor of Science in Games Development. I am a developer
             passionate about crafting clean, performant user interfaces that
-            blend thoughtful design with solid engineering. My favorite work
-            lives at the intersection of design and code, creating experiences
-            that not only look great but are meticulously built for performance
-            and usability.
+            blend thoughtful design with solid engineering. I'm a self-taught
+            developer with a strong passion for building accessible and
+            responsive web applications.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Currently, I am focused on building modern web applications with
