@@ -1,5 +1,4 @@
 import { Mail, Github, Linkedin } from "lucide-react";
-import { ContactForm } from "@/components/contact-form";
 
 export function ContactSection() {
   return (
@@ -48,9 +47,6 @@ export function ContactSection() {
               </a>
             </div>
           </div>
-
-          {/* Right - Form */}
-          <ContactForm />
         </div>
       </div>
     </section>

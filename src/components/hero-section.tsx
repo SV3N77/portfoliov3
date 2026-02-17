@@ -24,11 +24,13 @@ export function HeroSection() {
         {/* Right column */}
         <div className="flex flex-col justify-center">
           <p className="leading-relaxed text-muted-foreground">
-            I am a developer passionate about crafting clean, performant user
-            interfaces that blend thoughtful design with solid engineering. My
-            favorite work lives at the intersection of design and code, creating
-            experiences that not only look great but are meticulously built for
-            performance and usability.
+            I'm a graduate at the Unversity of Technology Sydney studied a
+            Bachelor of Science in Games Development. I am a developer
+            passionate about crafting clean, performant user interfaces that
+            blend thoughtful design with solid engineering. My favorite work
+            lives at the intersection of design and code, creating experiences
+            that not only look great but are meticulously built for performance
+            and usability.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Currently, I am focused on building modern web applications with
