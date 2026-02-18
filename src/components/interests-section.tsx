@@ -84,9 +84,9 @@ export function InterestsSection() {
             <motion.div
               key={interest.title}
               variants={itemVariants}
-              whileHover={{ y: -8 }}
+              whileHover={{ backgroundColor: "hsl(var(--accent) / 0.05)" }}
               transition={{ duration: 0.2 }}
-              className="group rounded-xl border border-border/60 bg-background p-6 transition-all hover:border-accent/40 hover:shadow-md"
+              className="group rounded-xl border border-border/60 bg-background p-6 transition-colors hover:border-accent/40 hover:shadow-md"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
