@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Calendar } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Calendar,
+  CheckCircle2,
+  Cpu,
+  Target
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ProjectImageCarousel } from "@/components/project-image-carousel";
 import { Project } from "@/lib/projects";
@@ -49,9 +56,11 @@ export function ProjectContentClient({
             {project.year}
           </div>
         </div>
-        <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
-          {project.summary}
-        </p>
+        <div className="mt-4 rounded-xl border-l-4 border-accent bg-accent/5 p-6">
+          <p className="text-lg leading-relaxed text-foreground">
+            {project.summary}
+          </p>
+        </div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -82,12 +91,12 @@ export function ProjectContentClient({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.3 }}
-        className="mt-10"
+        className="mt-12"
       >
-        <h2 className="text-xl font-semibold text-foreground">
+        <h2 className="mb-4 text-2xl font-semibold text-foreground">
           About this project
         </h2>
-        <p className="mt-4 leading-relaxed text-muted-foreground">
+        <p className="text-lg leading-relaxed text-muted-foreground">
           {project.description1}
         </p>
       </motion.div>
@@ -97,32 +106,91 @@ export function ProjectContentClient({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.4 }}
-          className="mt-10"
+          className="mt-12"
         >
-          <h2 className="text-lg font-semibold text-foreground">
+          <h2 className="mb-6 text-2xl font-semibold text-foreground">
             Features I worked on
           </h2>
-          {project.features.map((feature, index) => (
-            <motion.p
-              key={index}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
-              className="mt-4 leading-relaxed text-muted-foreground"
-            >
-              {feature}
-            </motion.p>
-          ))}
+          <ul className="space-y-4">
+            {project.features.map((feature, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.5 + index * 0.08 }}
+                className="flex items-start gap-3 text-lg leading-relaxed text-muted-foreground"
+              >
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                <span>{feature}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+
+      {project.technologies && project.technologies.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          className="mt-12"
+        >
+          <h2 className="mb-6 flex items-center gap-2 text-2xl font-semibold text-foreground">
+            <Cpu className="h-6 w-6 text-accent" />
+            Technologies used
+          </h2>
+          <ul className="space-y-4">
+            {project.technologies.map((tech, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.7 + index * 0.08 }}
+                className="flex items-start gap-3 text-lg leading-relaxed text-muted-foreground"
+              >
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                <span>{tech}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+
+      {project.challenges && project.challenges.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.7 }}
+          className="mt-12"
+        >
+          <h2 className="mb-6 flex items-center gap-2 text-2xl font-semibold text-foreground">
+            <Target className="h-6 w-6 text-accent" />
+            Challenges faced
+          </h2>
+          <ul className="space-y-4">
+            {project.challenges.map((challenge, index) => (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.8 + index * 0.08 }}
+                className="flex items-start gap-3 text-lg leading-relaxed text-muted-foreground"
+              >
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                <span>{challenge}</span>
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
       )}
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.5 }}
-        className="mt-10"
+        transition={{ duration: 0.4, delay: 0.8 }}
+        className="mt-12"
       >
-        <p className="mt-4 leading-relaxed text-muted-foreground">
+        <p className="text-lg leading-relaxed text-muted-foreground">
           {project.description2}
         </p>
       </motion.div>
@@ -133,7 +201,7 @@ export function ProjectContentClient({
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.9 }}
             className="mt-8"
           >
             <motion.a
@@ -153,7 +221,7 @@ export function ProjectContentClient({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.7 }}
+        transition={{ duration: 0.4, delay: 1.0 }}
         className="mt-16 flex items-center justify-between border-t border-border/60 pt-8"
       >
         {prev ? (
