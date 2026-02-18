@@ -28,11 +28,14 @@ This is a Next.js 16 portfolio project using React 19, Tailwind CSS v4, shadcn/u
 ## File Structure
 
 ```
-app/              # Next.js App Router pages
-components/       # React components
-  ui/            # shadcn/ui components
-lib/             # Utility functions (cn, etc.)
-public/          # Static assets
+src/
+  app/              # Next.js App Router pages
+    projects/
+      [slug]/       # Dynamic project pages
+  components/       # React components
+    ui/             # shadcn/ui components
+  lib/              # Utility functions (cn, etc.)
+public/             # Static assets
 ```
 
 ## Adding shadcn Components
