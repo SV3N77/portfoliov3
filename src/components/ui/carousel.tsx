@@ -31,7 +31,7 @@ type CarouselContextProps = {
 } & CarouselProps;
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
-
+// carsouel utility function
 function useCarousel() {
   const context = React.useContext(CarouselContext);
 
@@ -150,7 +150,7 @@ const Carousel = React.forwardRef<
   }
 );
 Carousel.displayName = "Carousel";
-
+// carousel content
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -194,7 +194,7 @@ const CarouselItem = React.forwardRef<
   );
 });
 CarouselItem.displayName = "CarouselItem";
-
+// carosel buttons
 const CarouselPrevious = ({
   className,
   variant = "outline",
@@ -210,15 +210,16 @@ const CarouselPrevious = ({
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-right-12 top-1/2 -translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      ←
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
     </Button>
   );
 };

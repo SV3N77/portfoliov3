@@ -14,7 +14,7 @@ export function Navbar() {
           href="/"
           className="font-mono text-sm font-bold tracking-tight text-foreground transition-colors hover:text-accent"
         >
-          Danny Jiang
+          Portfolio
         </Link>
         <ul className="flex items-center gap-8">
           {navLinks.map((link) => (
