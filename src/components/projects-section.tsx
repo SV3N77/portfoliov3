@@ -63,10 +63,11 @@ export function ProjectsSection() {
               variants={itemVariants}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.2 }}
+              className="h-full"
             >
               <Link
                 href={`/projects/${project.slug}`}
-                className="group block overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:border-accent/40 hover:shadow-md"
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-border/60 bg-card transition-all hover:border-accent/40 hover:shadow-md"
               >
                 <div className="relative aspect-16/10 overflow-hidden">
                   <motion.div
@@ -83,7 +84,7 @@ export function ProjectsSection() {
                     />
                   </motion.div>
                 </div>
-                <div className="p-5">
+                <div className="flex flex-1 flex-col p-5">
                   <div className="flex items-center justify-between">
                     <h3 className="font-semibold text-foreground">
                       {project.title}
@@ -95,7 +96,7 @@ export function ProjectsSection() {
                       <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
                     </motion.div>
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-1 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {project.summary}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
