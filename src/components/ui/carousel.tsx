@@ -31,7 +31,7 @@ type CarouselContextProps = {
 } & CarouselProps;
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
-// carsouel utility function
+/* carousel logic */
 function useCarousel() {
   const context = React.useContext(CarouselContext);
 
@@ -150,7 +150,7 @@ const Carousel = React.forwardRef<
   }
 );
 Carousel.displayName = "Carousel";
-// carousel content
+/* carousel content */
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -194,7 +194,7 @@ const CarouselItem = React.forwardRef<
   );
 });
 CarouselItem.displayName = "CarouselItem";
-// carosel buttons
+/* carousel buttons */
 const CarouselPrevious = ({
   className,
   variant = "outline",

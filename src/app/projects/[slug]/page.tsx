@@ -116,12 +116,15 @@ export default async function ProjectPage({
       {project.links &&
         project.links.map((link, index) => (
           <div key={index} className="mt-8">
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                View Project
-              </a>
-            </Button>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-accent"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View Project
+            </a>
           </div>
         ))}
 

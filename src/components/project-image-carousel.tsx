@@ -54,8 +54,8 @@ export function ProjectImageCarousel({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-3 border-border/60 bg-background/80 text-foreground backdrop-blur-sm hover:bg-background" />
-        <CarouselNext className="right-3 border-border/60 bg-background/80 text-foreground backdrop-blur-sm hover:bg-background" />
+        <CarouselPrevious className="left-3 border-border bg-card text-foreground backdrop-blur-sm transition-colors hover:border-border hover:bg-muted hover:text-accent" />
+        <CarouselNext className="right-3 border-border bg-card text-foreground backdrop-blur-sm transition-colors hover:border-border hover:bg-muted hover:text-accent" />
       </Carousel>
 
       {/* Dots indicator */}
