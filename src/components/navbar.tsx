@@ -35,6 +35,10 @@ export function Navbar() {
             >
               <Link
                 href={link.href}
+                {...(link.label === "Resume" && {
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                })}
                 className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 <motion.span
