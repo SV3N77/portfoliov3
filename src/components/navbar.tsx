@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 const navLinks = [
   { label: "Projects", href: "/#projects" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" }
+  { label: "Contact", href: "/#contact" },
+  { label: "Resume", href: "/files/Danny_Jiang_resume2.pdf" }
 ];
 
 export function Navbar() {
