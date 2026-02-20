@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Projects", href: "/#projects" },
@@ -11,6 +14,8 @@ const navLinks = [
 ];
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -25,7 +30,8 @@ export function Navbar() {
         >
           Portfolio
         </Link>
-        <ul className="flex items-center gap-8">
+
+        <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link, index) => (
             <motion.li
               key={link.href}
@@ -52,7 +58,50 @@ export function Navbar() {
             </motion.li>
           ))}
         </ul>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
+        </Button>
       </nav>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden border-t border-border/60 bg-background/95 backdrop-blur-md"
+          >
+            <ul className="flex flex-col gap-4 px-6 py-4">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    {...(link.label === "Resume" && {
+                      target: "_blank",
+                      rel: "noopener noreferrer"
+                    })}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
