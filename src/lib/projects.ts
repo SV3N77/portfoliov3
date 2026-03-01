@@ -107,7 +107,7 @@ export const projects: Project[] = [
     ],
     description2:
       "This project was a great learning experience for me as I learned to use a public API. I also learned how to use the Shadcn UI library which is a great library for creating websites. I also learned how to use the TailwindCSS library which is a great library for styling websites.",
-    tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     images: [
       "/images/projects/anime-db/01.png",
       "/images/projects/anime-db/02.png"
