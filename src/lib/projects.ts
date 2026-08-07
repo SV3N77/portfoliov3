@@ -16,7 +16,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "mhwildsinfo",
-    title: "MHWildsInfo (WIP)",
+    title: "MHWildsInfo",
     summary: "An information website for Monster Hunter Wilds.",
     description1:
       "One of my most recent projects, I worked upon, using my experience from my previous projects and learning to use a public API. This project is a website that displays information about Monster Hunter Wilds. It is a work in progress and will be updated as I learn more.",
